@@ -6,7 +6,7 @@ const phonesRoutes = (app, fs) => {
       if (err) {
         throw err;
       }
-
+      res.setHeader('Access-Control-Allow-Origin', '*');
       res.send(JSON.parse(data));
     });
   });
