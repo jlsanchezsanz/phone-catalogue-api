@@ -1,7 +1,7 @@
 const phonesRoutes = (app, fs) => {
   const dataPath = './data/phones.json';
 
-  app.get('/phones', (req, res) => {
+  app.get('/phones', (_, res) => {
     fs.readFile(dataPath, 'utf8', (err, data) => {
       if (err) {
         throw err;
